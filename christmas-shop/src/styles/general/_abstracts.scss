@@ -1,5 +1,5 @@
 // mixins
-@mixin font($size, $weight, $height, $spacing: normal, $transform: none) {
+@mixin font($size, $weight, $height: 100%, $spacing: normal, $transform: none) {
   font-size: $size;
   font-weight: $weight;
   line-height: $height;
