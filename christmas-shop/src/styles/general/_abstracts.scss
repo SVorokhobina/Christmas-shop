@@ -1,0 +1,32 @@
+// mixins
+@mixin font($size, $weight, $height, $spacing: normal, $transform: none) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  letter-spacing: $spacing;
+  text-transform: $transform;
+}
+
+// placeholders
+%font-prim {
+  font-family: 'Montserrat', Verdana, sans-serif;
+}
+
+%font-add {
+  font-family: 'Allura', serif;
+}
+
+// variables
+$color-dark: rgba(24, 28, 41, 1);
+$color-primary: rgba(255, 70, 70, 1);
+$color-primary-10: rgba(255, 70, 70, 0.1);
+$color-white: rgba(255, 255, 255, 1);
+$color-white-40: rgba(255, 255, 255, 0.4);
+$color-white-20: rgba(255, 255, 255, 0.2);
+$color-tag-purple: rgba(67, 97, 255, 1);
+$color-tag-pink: rgba(255, 67, 247, 1);
+$color-tag-green: rgba(6, 164, 79, 1);
+$color-background: rgba(236, 243, 248, 1);
+$color-overlay: rgba(24, 28, 41, 0.8);
+
+

@@ -1,0 +1,58 @@
+@use '../general/abstracts';
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 82px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.logo__icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../assets/icons/logo_snowflake.svg);
+}
+
+.logo__text {
+  @include abstracts.font($size: 1.2rem, $weight: 600, $height: 130%, $spacing: 0.6px, $transform: uppercase);
+  color: abstracts.$color-dark;
+}
+
+.navigation {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.navigation__elem {
+  list-style-type: none;
+}
+
+.navigation__link {
+  display: inline-block;
+  padding: 12px 20px;
+  text-decoration: none;
+  @include abstracts.font($size: 1.2rem, $weight: 600, $height: 130%, $spacing: 0.6px, $transform: uppercase);
+  color: abstracts.$color-dark;
+  border-radius: 12px;
+  transition: color 0.3s, background-color 0.3s;
+  &:hover {
+    cursor: pointer;
+    color: abstracts.$color-primary;
+    background-color: abstracts.$color-primary-10;
+  }
+}

@@ -1,0 +1,12 @@
+@use '../general/abstracts';
+
+.hero__wrapper {
+  background: abstracts.$color-primary;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.hero__content {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 426px;
+}

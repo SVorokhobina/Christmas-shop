@@ -50,6 +50,8 @@ module.exports = (env) => {
       new HtmlWebpackPlugin({
         inject: true,
         template: path.resolve(__dirname, 'src', 'pages', 'home.html'),
+        // title: Christmas Shop,
+        favicon: '',
         filename: 'index.html',
         chunks: ['home'],
       }),
@@ -58,6 +60,8 @@ module.exports = (env) => {
         template: path.resolve(__dirname, 'src', 'pages', 'gift.html'),
         filename: 'gift.html',
         chunks: ['gift'],
+        // title: 'Christmas Shop',
+        favicon: '',
       }),
       isProd && new MiniCssExtractPlugin({
         filename: 'styles/[name].css'
@@ -73,13 +77,13 @@ module.exports = (env) => {
             "css-loader",
             "sass-loader"],
         },
-        /*{
+        {
           test: /\.(jpe?g|png|webp|gif|svg)$/i,
           type: 'asset/resource',
           generator: {
             filename: 'images/[name][ext]'
           }
-        },*/
+        },
       ],
     },
 
