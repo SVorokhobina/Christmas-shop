@@ -11,12 +11,21 @@ html {
 }
 
 body {
+  display: flex;
+  flex-flow: column nowrap;
   width: 100%;
   margin: 0;
   background-color: abstracts.$color-white;
   @extend %font-prim;
 }
 
-.wrapper {
+.wrapper,
+.main-wrapper {
   width: 1440px;
+  margin: 0 auto;
+}
+
+.main-wrapper {
+  background-color: abstracts.$color-primary;
+  border-radius: 20px;
 }

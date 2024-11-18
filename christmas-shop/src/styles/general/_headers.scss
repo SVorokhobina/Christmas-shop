@@ -1,0 +1,12 @@
+@use './abstracts';
+
+.caption {
+  @extend %font-add;
+  @include abstracts.font($size: 2.4rem, $weight: 400, $height: 100%, $spacing: 1.2px);
+  margin: 0;
+}
+
+h2 {
+  @include abstracts.font($size: 2.4rem, $weight: 600, $height: 152%, $spacing: 3.84px, $transform: uppercase);
+  margin: 0;
+}

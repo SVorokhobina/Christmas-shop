@@ -1,0 +1,80 @@
+@use '../general/abstracts';
+@use '../general/headers';
+
+.slider-section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 0;
+  color: abstracts.$color-white;
+  background: url(../assets/images/bg-snow.png) center center/cover no-repeat;
+}
+
+.slider__title {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.slider__container {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider__line {
+  position: absolute;
+  left: 82px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.slider__word {
+  @include abstracts.font($size: 8rem, $weight: 600, $transform: uppercase);
+}
+
+.slider__image {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  &_1 {
+    background: url(../assets/images/snowman.png) center center/cover;
+  }
+  &_2 {
+    background: url(../assets/images/christmas-trees.png) center center/cover;
+  }
+  &_3 {
+    background: url(../assets/images/christmas-tree-ball.png) center center/cover;
+  }
+}
+
+.slider__buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  width: 100%;
+  padding: 0 82px;
+}
+
+.arrow-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid abstracts.$color-white;
+  border-radius: 20px;
+  padding: 15px;
+  &_inactive {
+    border: 1px solid abstracts.$color-white-40;
+    cursor: auto;
+  }
+}

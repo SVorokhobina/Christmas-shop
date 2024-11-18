@@ -1,0 +1,23 @@
+@use '../general/abstracts';
+@use '../general/headers';
+@use '../general/card';
+
+.best-gifts-section {
+  padding: 60px 82px;
+  background: url(../assets/images/bg-snow.png) center center/cover no-repeat;
+}
+
+.best__title {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 12px;
+  color: abstracts.$color-white;
+  margin-bottom: 20px;
+}
+
+.best__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}

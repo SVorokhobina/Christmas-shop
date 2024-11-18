@@ -1,0 +1,49 @@
+@use '../general/abstracts';
+@use '../general/headers';
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0px;
+  background: url('../assets/images/bg-snow.png') center top/cover no-repeat;
+}
+
+.about__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: abstracts.$color-white;
+  width: 1276px;
+  border-radius: 20px;
+}
+
+.about__content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 426px;
+  margin-left: 60px;
+}
+
+.about__caption {
+  color: abstracts.$color-primary;
+}
+
+.about__title {
+  color: abstracts.$color-dark;
+}
+
+.about__text {
+  @include abstracts.font($size: 1.6rem, $weight: 400, $height: 148%);
+  color: abstracts.$color-dark;
+  margin: 0;
+}
+
+.about__image {
+  background: url(../assets/images/santa.png) border-box border-box;
+  width: 638px;
+  height: 528px;
+  border-radius: 20px;
+}

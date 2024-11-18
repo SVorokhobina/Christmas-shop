@@ -1,5 +1,15 @@
 @use './general/abstracts';
 @use './general/general';
 
+// page blocks
 @use './blocks/header';
 @use './blocks/hero';
+@use './blocks/about';
+@use './blocks/slider';
+@use './blocks/best';
+
+// components
+@use './general/headers';
+@use './general/card';
+
+

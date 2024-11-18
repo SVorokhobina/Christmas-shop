@@ -1,0 +1,54 @@
+@use './abstracts';
+@use './general';
+
+.card {
+  width: 310px;
+  height: 342px;
+  border-radius: 20px;
+  background-color: abstracts.$color-white;
+}
+
+.card__image {
+  width: 310px;
+  height: 230px;
+  border-radius: 20px 20px 0 0;
+  &_work {
+    background: url(../assets/images/gift-for-work.png) center center/cover,
+    abstracts.$color-background;
+  }
+  &_health {
+    background: url(../assets/images/gift-for-health.png) center center/cover,
+    abstracts.$color-background;;
+  }
+  &_harmony {
+    background: url(../assets/images/gift-for-harmony.png) center center/cover,
+    abstracts.$color-background;;
+  }
+}
+
+.card__for-title {
+  @include abstracts.font($size: 1.2rem, $weight: 600, $height: 130%, $spacing: 0.6px, $transform: uppercase);
+  margin: 20px auto 8px 20px;
+  &_work {
+    color: abstracts.$color-tag-purple;
+  }
+  &_health {
+    color: abstracts.$color-tag-green;
+  }
+  &_harmony {
+    color: abstracts.$color-tag-pink;
+  }
+}
+
+.card__title {
+  @include abstracts.font($size: 1.6rem, $weight: 600, $height: 152%, $spacing: 1.35px, $transform: uppercase);
+  margin: 0 20px 44px 20px;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  cursor: pointer;
+  & .card__title {
+    color: abstracts.$color-primary;
+  }
+}

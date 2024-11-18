@@ -1,13 +1,12 @@
 @use '../general/abstracts';
+@use '../general/headers';
 
-.hero__wrapper {
+.hero-section {
   display: flex;
   justify-content: center;
   align-items: center;
   background: url(../assets/images/bg-snow.png) center -38px/1440px no-repeat,
-    url(../assets/images/bg-ball.png) center -40px/1440px no-repeat,
-    abstracts.$color-primary;
-  border-radius: 20px 20px 0px 0px;
+    url(../assets/images/bg-ball.png) center -40px/1440px no-repeat;
   padding: 60px 0px;
 }
 
@@ -19,12 +18,6 @@
   width: 426px;
   padding: 60px 0px;
   color: abstracts.$color-white;
-}
-
-.hero__caption {
-  @extend %font-add;
-  @include abstracts.font($size: 2.4rem, $weight: 400, $spacing: 1.2px);
-  margin: 0;
 }
 
 .hero__title {
