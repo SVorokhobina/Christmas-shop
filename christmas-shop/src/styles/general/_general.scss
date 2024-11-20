@@ -1,4 +1,4 @@
-@use './abstracts';
+@use './variables';
 
 *,
 ::after,
@@ -15,8 +15,7 @@ body {
   flex-flow: column nowrap;
   width: 100%;
   margin: 0;
-  background-color: abstracts.$color-white;
-  @extend %font-prim;
+  background-color: variables.$color-white;
 }
 
 .wrapper,
@@ -26,6 +25,6 @@ body {
 }
 
 .main-wrapper {
-  background-color: abstracts.$color-primary;
+  background-color: variables.$color-primary;
   border-radius: 20px;
 }

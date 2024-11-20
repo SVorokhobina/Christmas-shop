@@ -1,0 +1,54 @@
+@mixin font($size, $weight, $height: 100%, $spacing: normal, $transform: none) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  letter-spacing: $spacing;
+  text-transform: $transform;
+}
+
+%font-prim {
+  font-family: 'Montserrat', Verdana, sans-serif;
+}
+
+%font-add {
+  font-family: 'Allura', serif;
+}
+
+// h1
+%font_header1 {
+  @extend %font-prim;
+  @include font($size: 3.2rem, $weight: 600, $height: 150%, $spacing: 0.576rem, $transform: uppercase);
+}
+
+// h2
+%font_header2,
+%font_action-large {
+  @extend %font-prim;
+  @include font($size: 2.4rem, $weight: 600, $height: 152%, $spacing: 0.384rem, $transform: uppercase);
+}
+
+%font_header3 {
+  @extend %font-prim;
+  @include font($size: 1.6rem, $weight: 600, $height: 152%, $spacing: 0.128rem, $transform: uppercase);
+}
+
+%font_header4,
+%font_action-small {
+  @extend %font-prim;
+  @include font($size: 1.2rem, $weight: 600, $height: 130%, $spacing: 0.06rem, $transform: uppercase);
+}
+
+%font_paragraph {
+  @extend %font-prim;
+  @include font($size: 1.6rem, $weight: 400, $height: 148%);
+}
+
+%font_caption {
+  @extend %font-add;
+  @include font($size: 1.2rem, $weight: 600, $height: 130%, $spacing: 0.06rem, $transform: uppercase);
+}
+
+%font_slider-text {
+  @extend %font-prim;
+  @include font($size: 8.0rem, $weight: 600, $transform: uppercase);
+}

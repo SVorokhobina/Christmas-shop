@@ -1,4 +1,5 @@
-@use '../general/abstracts';
+@use '../general/variables';
+@use '../general/fonts';
 
 .header__wrapper {
   display: flex;
@@ -12,6 +13,7 @@
   align-items: center;
   gap: 8px;
   padding: 8px 20px;
+  text-decoration: none;
   &:hover {
     cursor: pointer;
   }
@@ -25,8 +27,8 @@
 }
 
 .logo__text {
-  @include abstracts.font($size: 1.2rem, $weight: 600, $height: 130%, $spacing: 0.6px, $transform: uppercase);
-  color: abstracts.$color-dark;
+  @extend %font_action-small;
+  color: variables.$color-dark;
 }
 
 .navigation {
@@ -46,13 +48,13 @@
   display: inline-block;
   padding: 12px 20px;
   text-decoration: none;
-  @include abstracts.font($size: 1.2rem, $weight: 600, $height: 130%, $spacing: 0.6px, $transform: uppercase);
-  color: abstracts.$color-dark;
+  @extend %font_action-small;
+  color: variables.$color-dark;
   border-radius: 12px;
   transition: color 0.3s, background-color 0.3s;
   &:hover {
     cursor: pointer;
-    color: abstracts.$color-primary;
-    background-color: abstracts.$color-primary-10;
+    color: variables.$color-primary;
+    background-color: variables.$color-primary-10;
   }
 }

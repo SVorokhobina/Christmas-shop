@@ -1,0 +1,37 @@
+@use '../general/abstracts';
+
+.cta-section {
+  background: url(../assets/images/bg-snow.png) center center/cover no-repeat,
+    url(../assets/images/bg-forest.png) bottom center/cover no-repeat;
+  padding: 180px 0;
+  color: abstracts.$color-white;
+  text-align: center;
+
+  & h2 {
+    max-width: 426px;
+    margin: 0 auto 20px auto;
+  }
+
+  & .caption {
+    margin: 20px auto 8px auto;
+  }
+}
+
+.timer__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 344px;
+  margin: 0 auto;
+  background-color: abstracts.$color-white-40;
+  border-radius: 20px;
+}
+
+.timer__days,
+.timer__hours,
+.timer__minutes,
+.timer__seconds {
+  width: 80px;
+  height: 52px;
+}
+

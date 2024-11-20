@@ -1,15 +1,17 @@
-@use './general/abstracts';
+@use './general/variables';
+@use './general/fonts';
 @use './general/general';
 
 // page blocks
 @use './blocks/header';
-@use './blocks/hero';
+/*@use './blocks/hero';
 @use './blocks/about';
 @use './blocks/slider';
 @use './blocks/best';
+@use './blocks/cta';
 
 // components
 @use './general/headers';
-@use './general/card';
+@use './general/card';*/
 
 
