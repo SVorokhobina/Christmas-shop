@@ -1,48 +1,62 @@
-@use '../general/abstracts';
+@use '../general/variables';
+@use '../general/fonts';
 
 .about-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px 0px;
-  background: url('../assets/images/bg-snow.png') center top/cover no-repeat;
+  padding: 60px 0;
+  background-image: url('../assets/images/bg-snow.png');
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .about__container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: abstracts.$color-white;
-  width: 1276px;
+  justify-content: space-between;
+  background-color: variables.$color-white;
   border-radius: 20px;
+  width: 1276px;
 }
 
-.about__content {
+.about__text-section {
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+}
+
+.about__text-wrapper {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
   gap: 20px;
   max-width: 426px;
-  margin-left: 60px;
+  padding: 60px 0;
 }
 
 .about__caption {
-  color: abstracts.$color-primary;
+  @extend %font_caption;
+  color: variables.$color-primary;
+  margin: 0;
 }
 
 .about__title {
-  color: abstracts.$color-dark;
+  @extend %font_header2;
+  color: variables.$color-dark;
+  margin: 0;
 }
 
-.about__text {
-  @include abstracts.font($size: 1.6rem, $weight: 400, $height: 148%);
-  color: abstracts.$color-dark;
+.about__description {
+  @extend %font_paragraph;
+  color: variables.$color-dark;
   margin: 0;
 }
 
 .about__image {
-  background: url(../assets/images/santa.png) border-box border-box;
-  width: 638px;
+  background: url(../assets/images/santa.png) center center/cover no-repeat;
   height: 528px;
+  width: 638px;
   border-radius: 20px;
 }
