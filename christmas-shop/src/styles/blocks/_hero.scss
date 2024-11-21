@@ -1,12 +1,15 @@
-@use '../general/abstracts';
+@use '../general/variables';
+@use '../general/fonts';
 
 .hero-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(../assets/images/bg-snow.png) center -38px/1440px no-repeat,
-    url(../assets/images/bg-ball.png) center -40px/1440px no-repeat;
   padding: 60px 0px;
+  background-image: url(../assets/images/bg-snow.png), url(../assets/images/bg-ball.png);
+  background-position: center center, center center;
+  background-size: 1440px, 1440px;
+  background-repeat: no-repeat, no-repeat;
 }
 
 .hero__content {
@@ -16,27 +19,18 @@
   gap: 12px;
   width: 426px;
   padding: 60px 0px;
-  color: abstracts.$color-white;
+  color: variables.$color-white;
+}
+
+.hero__caption {
+  @extend %font_caption;
+  margin: 0;
 }
 
 .hero__title {
-  @include abstracts.font($size: 3.2rem, $weight: 600, $height: 150%, $spacing: 5.76px, $transform: uppercase);
+  @extend %font_header1;
   text-align: center;
   margin: 0px;
 }
 
-.hero__button {
-  background-color: abstracts.$color-dark;
-  padding: 20px 32px;
-  color: abstracts.$color-white;
-  @extend %font-prim;
-  @include abstracts.font($size: 1.2rem, $weight: 600, $height: 130%, $spacing: 0.6px, $transform: uppercase);
-  border: none;
-  border-radius: 20px;
-  transition: color 0.3s, background-color 0.3s;
-  &:hover {
-    cursor: pointer;
-    background-color: abstracts.$color-white;
-    color: abstracts.$color-dark;
-  }
-}
+// 'Explore magical gifts' link-button is in '../components/buttons'

@@ -4,14 +4,14 @@
 
 // page blocks
 @use './blocks/header';
-/*@use './blocks/hero';
-@use './blocks/about';
+@use './blocks/hero';
+/*@use './blocks/about';
 @use './blocks/slider';
 @use './blocks/best';
-@use './blocks/cta';
+@use './blocks/cta'; */
 
 // components
-@use './general/headers';
-@use './general/card';*/
+@use './components/buttons';
+// @use './general/card';
 
 
