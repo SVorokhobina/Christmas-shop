@@ -25,7 +25,7 @@ module.exports = (env) => {
       path: path.resolve(__dirname, 'dist'),
       filename: 'scripts/[name].js',
       clean: true,
-      // assetModuleFilename: 'assets/[name][ext]'
+      //assetModuleFilename: 'images/[name][ext]'
     },
 
     optimization: {
