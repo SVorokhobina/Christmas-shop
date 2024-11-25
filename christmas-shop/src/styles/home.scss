@@ -7,11 +7,11 @@
 @use './blocks/hero';
 @use './blocks/about';
 @use './blocks/slider';
-/*@use './blocks/best';
-@use './blocks/cta'; */
+@use './blocks/best';
+/* @use './blocks/cta'; */
 
 // components
 @use './components/buttons';
-// @use './general/card';
+@use './components/card';
 
 

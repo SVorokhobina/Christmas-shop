@@ -12,10 +12,10 @@
 <body>
   <header>
     <div class="wrapper header__wrapper">
-      <a class="logo" href="/">
+      <div class="logo">
         <span class="logo__icon"></span>
         <span class="logo__text font_action-small">The gifts</span>
-      </a>
+      </div>
       <nav class="header__navigation">
         <ul class="navigation">
           <li class="navigation__elem"><a href="./gift.html" class="navigation__link">Gifts</a></li>
@@ -83,36 +83,44 @@
       </div>
     </section>
 
-    <!--<section class="best-gifts-section">
+    <section class="best-gifts-section" id="best">
       <div class="best__title">
-        <div class="caption">Best Gifts</div>
+        <p>Best Gifts</p>
         <h2>Especially for you</h2>
       </div>
       <div class="best__container">
         <div class="card card_work">
           <div class="card__image card__image_work"></div>
-          <h4 class="card__for-title card__for-title_work">for work</h4>
-          <h3 class="card__title">Console.log Guru</h3>
+          <div class="card__text">
+            <h4 class="card__tag card__tag_work">for work</h4>
+            <h3 class="card__title">Console.log Guru</h3>
+          </div>
         </div>
         <div class="card card_health">
           <div class="card__image card__image_health"></div>
-          <h4 class="card__for-title card__for-title_health">for health</h4>
-          <h3 class="card__title">Hydration Bot</h3>
+          <div class="card__text">
+            <h4 class="card__tag card__tag_health">for health</h4>
+            <h3 class="card__title">Hydration Bot</h3>
+          </div>
         </div>
         <div class="card card_work">
           <div class="card__image card__image_work"></div>
-          <h4 class="card__for-title card__for-title_work">for work</h4>
-          <h3 class="card__title">Merge Master</h3>
+          <div class="card__text">
+            <h4 class="card__tag card__tag_work">for work</h4>
+            <h3 class="card__title">Merge Master</h3>
+          </div>
         </div>
         <div class="card card_harmony">
           <div class="card__image card__image_harmony"></div>
-          <h4 class="card__for-title card__for-title_harmony">for harmony</h4>
-          <h3 class="card__title">Spontaneous Coding Philosopher</h3>
+          <div class="card__text">
+            <h4 class="card__tag card__tag_harmony">for harmony</h4>
+            <h3 class="card__title">Spontaneous Coding Philosopher</h3>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="cta-section">
+    <!--<section class="cta-section">
       <h2>Ready to start your journey to a better version of yourself?</h2>
       <button class="hero__button">Explore Magical Gifts</button>
       <div class="caption">The New Year is Coming Soon...</div>
