@@ -2,7 +2,8 @@
 @use '../general/fonts';
 
 // 'Explore magical gifts' button-links
-.hero__link-button {
+.hero__link-button,
+.cta__link-button {
   background-color: variables.$color-dark;
   padding: 20px 32px;
   border-radius: 20px;
