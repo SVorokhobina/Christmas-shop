@@ -15,6 +15,7 @@ body {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
+  min-height: 100vh;
   margin: 0;
   background-color: variables.$color-white;
 }
@@ -26,6 +27,7 @@ body {
 }
 
 .main-wrapper {
-  background-color: variables.$color-primary;
+  //background-color: variables.$color-primary;
+  background-image: linear-gradient(variables.$color-primary 99.9%, variables.$color-white);
   border-radius: 20px;
 }

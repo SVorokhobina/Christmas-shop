@@ -47,13 +47,17 @@ a.logo {
   list-style-type: none;
 }
 
+.navigation__elem span,
 .navigation__link {
   display: inline-block;
   padding: 12px 20px;
-  text-decoration: none;
   @extend %font_action-small;
   color: variables.$color-dark;
   border-radius: 12px;
+}
+
+.navigation__link {
+  text-decoration: none;
   transition: color 0.3s, background-color 0.3s;
   &:hover {
     cursor: pointer;

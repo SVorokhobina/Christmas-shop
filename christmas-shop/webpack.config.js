@@ -51,17 +51,17 @@ module.exports = (env) => {
         inject: true,
         template: path.resolve(__dirname, 'src', 'pages', 'home.html'),
         // title: Christmas Shop,
-        favicon: '',
+        favicon: path.resolve(__dirname, 'src', 'assets', 'icons', 'favicon.ico'),
         filename: 'index.html',
         chunks: ['home'],
       }),
       new HtmlWebpackPlugin({
         inject: true,
         template: path.resolve(__dirname, 'src', 'pages', 'gift.html'),
+        favicon: path.resolve(__dirname, 'src', 'assets', 'icons', 'favicon.ico'),
         filename: 'gift.html',
         chunks: ['gift'],
         // title: 'Christmas Shop',
-        favicon: '',
       }),
       isProd && new MiniCssExtractPlugin({
         filename: 'styles/[name].css'

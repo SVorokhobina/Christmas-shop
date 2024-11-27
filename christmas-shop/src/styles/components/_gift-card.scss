@@ -1,14 +1,14 @@
 @use '../general/variables';
 @use '../general/fonts';
 
-.card {
+.gift-card {
   width: 310px;
   height: 342px;
   border-radius: 20px;
   background-color: variables.$color-white;
 }
 
-.card__image {
+.gift-card__image {
   width: 310px;
   height: 230px;
   border-radius: 20px 20px 0 0;
@@ -26,12 +26,12 @@
   }
 }
 
-.card__text {
+.gift-card__text {
   width: 100%;
   padding: 20px 20px 0 20px;
 }
 
-.card__tag {
+.gift-card__tag {
   @extend %font_header4;
   margin: 0 0 9px 0;
   &_work {
@@ -45,15 +45,15 @@
   }
 }
 
-.card__title {
+.gift-card__title {
   @extend %font_header3;
   margin: 0;
   transition: all 0.3s;
 }
 
-.card:hover {
+.gift-card:hover {
   cursor: pointer;
-  & .card__title {
+  & .gift-card__title {
     color: variables.$color-primary;
   }
 }

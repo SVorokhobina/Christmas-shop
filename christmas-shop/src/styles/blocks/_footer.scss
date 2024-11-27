@@ -1,0 +1,52 @@
+@use '../general/variables';
+@use '../general/fonts';
+
+.footer__wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 60px 82px;
+}
+
+.footer__card-container {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+// Social
+.footer__social {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.icon-social {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+
+  & svg path {
+    transition: stroke 0.3s;
+  }
+
+  &:hover > svg > path {
+    stroke: variables.$color-primary;
+  }
+}
+
+.footer__copyright {
+  @extend %font_paragraph;
+  margin: 0 0 12px 0;
+}
+
+.footer__school-link {
+  @extend %font_caption;
+  color: variables.$color-dark;
+  text-decoration: none;
+  transition: color 0.3s;
+  &:hover {
+    color: variables.$color-primary;
+  }
+}

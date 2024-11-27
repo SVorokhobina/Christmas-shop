@@ -9,9 +9,9 @@
 @use './blocks/slider';
 @use './blocks/best';
 @use './blocks/cta';
+@use './blocks/footer';
 
 // components
 @use './components/buttons';
-@use './components/card';
-
-
+@use './components/gift-card';
+@use './components/footer-card';
