@@ -20,7 +20,11 @@ body {
   background-color: variables.$color-white;
 }
 
-.wrapper,
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .main-wrapper {
   width: 1440px;
   margin: 0 auto;
