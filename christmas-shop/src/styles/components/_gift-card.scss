@@ -6,6 +6,14 @@
   height: 342px;
   border-radius: 20px;
   background-color: variables.$color-white;
+  @media (hover:hover) and (pointer: fine) {
+    &:hover {
+      cursor: pointer;
+      & .gift-card__title {
+        color: variables.$color-primary;
+      }
+    }
+  }
 }
 
 .gift-card__image {
@@ -49,11 +57,4 @@
   @extend %font_header3;
   margin: 0;
   transition: all 0.3s;
-}
-
-.gift-card:hover {
-  cursor: pointer;
-  & .gift-card__title {
-    color: variables.$color-primary;
-  }
 }

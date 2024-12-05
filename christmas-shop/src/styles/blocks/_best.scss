@@ -4,6 +4,9 @@
 .best-gifts-section {
   padding: 60px 82px;
   background: url(../assets/images/bg-snow.png) center center/cover no-repeat;
+  @media screen and (max-width: 800px) {
+    padding: 60px 8px;
+  }
 }
 
 .best__title {
@@ -26,6 +29,6 @@
 .best__container {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: center;
   gap: 12px;
 }
