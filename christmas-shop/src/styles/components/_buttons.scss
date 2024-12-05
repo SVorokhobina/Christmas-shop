@@ -11,9 +11,11 @@
   color: variables.$color-white;
   text-decoration: none;
   transition: color 0.4s, background-color 0.4s;
-  &:hover {
-    cursor: pointer;
-    background-color: variables.$color-white;
-    color: variables.$color-dark;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      cursor: pointer;
+      background-color: variables.$color-white;
+      color: variables.$color-dark;
+    }
   }
 }

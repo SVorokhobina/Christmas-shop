@@ -25,12 +25,7 @@ body {
   margin: 0 auto;
 }
 
-.main-wrapper {
-  width: 1440px;
-  margin: 0 auto;
-}
-
-.main-wrapper {
+.main-colored-wrapper {
   //background-color: variables.$color-primary;
   background-image: linear-gradient(variables.$color-primary 99.9%, variables.$color-white);
   border-radius: 20px;
