@@ -40,6 +40,9 @@
   flex-wrap: nowrap;
   align-items: center;
   gap: 20px;
+  @media screen and (max-width: 768px) {
+    left: 8px;
+  }
 }
 
 .slider__word {
@@ -75,6 +78,9 @@
   gap: 20px;
   width: 100%;
   padding: 0 82px;
+  @media screen and (max-width: 768px) {
+    padding: 0 8px;
+  }
 }
 
 .arrow-button {
@@ -92,16 +98,18 @@
 }
 
 .arrow-button_active {
-  cursor: pointer;
   & svg * {
     stroke-opacity: 1;    
   }
-  &:hover > svg {
-    & > rect {
-      fill: variables.$color-white;
+  @media (hover: hover) and (pointer: fine) {
+    cursor: pointer;
+    &:hover > svg {
+      & > rect {
+        fill: variables.$color-white;
+      }
+      & > path {
+        stroke: variables.$color-primary;
+      }
     }
-    & > path {
-      stroke: variables.$color-primary;
-    }
-  }  
+  } 
 }

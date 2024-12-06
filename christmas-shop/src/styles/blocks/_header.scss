@@ -6,6 +6,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 82px;
+  @media screen and (max-width: 768px) {
+    padding: 12px 8px;
+  }
 }
 
 .logo {
@@ -34,6 +37,12 @@ a.logo {
   color: variables.$color-dark;
 }
 
+.header__navigation {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
 .navigation {
   display: flex;
   align-items: baseline;
@@ -59,9 +68,47 @@ a.logo {
 .navigation__link {
   text-decoration: none;
   transition: color 0.3s, background-color 0.3s;
-  &:hover {
-    cursor: pointer;
-    color: variables.$color-primary;
-    background-color: variables.$color-primary-10;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      cursor: pointer;
+      color: variables.$color-primary;
+      background-color: variables.$color-primary-10;
+    }
+  }
+}
+
+.burger-button {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+
+  &::before,
+  &::after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 0;
+    border: 0.5px solid variables.$color-dark;
+    border-radius: 2px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  &::before {
+    top: 15px;
+  }
+  &::after {
+    bottom: 15px;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: inline-block;
   }
 }

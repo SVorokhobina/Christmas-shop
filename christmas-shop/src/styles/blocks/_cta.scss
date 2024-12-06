@@ -7,13 +7,16 @@
   background-position: center center, center center;
   background-size: cover, cover;
   background-repeat: no-repeat, no-repeat;
+  @media screen and (max-width: 590px) {
+    padding: 120px 8px;
+  }
 }
 
 .cta__content {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  width: 426px;
+  max-width: 426px;
   margin: 0 auto;
   padding: 60px 0;
   color: variables.$color-white;
