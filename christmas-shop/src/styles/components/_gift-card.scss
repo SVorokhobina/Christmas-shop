@@ -6,7 +6,7 @@
   height: 342px;
   border-radius: 20px;
   background-color: variables.$color-white;
-  @media (hover:hover) and (pointer: fine) {
+  @media (hover: hover) and (pointer: fine) {
     &:hover {
       cursor: pointer;
       & .gift-card__title {

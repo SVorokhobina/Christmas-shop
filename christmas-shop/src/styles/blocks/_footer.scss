@@ -6,6 +6,9 @@
   flex-flow: column nowrap;
   align-items: center;
   padding: 60px 82px;
+  @media screen and (max-width: 768px) {
+    padding: 60px 8px;
+  }
 }
 
 .footer__card-container {
@@ -13,6 +16,9 @@
   gap: 12px;
   width: 100%;
   margin-bottom: 60px;
+  @media screen and (max-width: 1250px) {
+    flex-direction: column;
+  }
 }
 
 // Social
@@ -31,9 +37,11 @@
     transition: stroke 0.3s;
   }
 
-  &:hover > svg > path {
-    stroke: variables.$color-primary;
-  }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover > svg > path {
+      stroke: variables.$color-primary;
+    }
+  }  
 }
 
 .footer__copyright {
@@ -46,7 +54,9 @@
   color: variables.$color-dark;
   text-decoration: none;
   transition: color 0.3s;
-  &:hover {
-    color: variables.$color-primary;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: variables.$color-primary;
+    }
   }
 }

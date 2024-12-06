@@ -39,9 +39,11 @@
   transition: color 0.3s;
 }
 
-.footer-card:hover {
-  .footer-card__link-target,
-  .footer-card__link-action {
-    color: variables.$color-primary;
+@media (hover: hover) and (pointer: fine) {
+  .footer-card:hover {
+    .footer-card__link-target,
+    .footer-card__link-action {
+      color: variables.$color-primary;
+    }
   }
 }

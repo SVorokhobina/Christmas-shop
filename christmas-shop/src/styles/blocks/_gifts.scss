@@ -22,11 +22,14 @@
   background-size: contain;
   background-position: center top;
   background-repeat: no-repeat;
+  @media screen and (max-width: 800px) {
+    padding: 60px 8px;
+  }
 }
 
 .gift__title {
   @extend %font_header1;
-  width: 426px;
+  max-width: 426px;
   margin: 0;
   text-align: center;
   color: variables.$color-white;
@@ -38,19 +41,28 @@
   gap: 8px;
   align-items: center;
   color: variables.$color-white;
+  @media screen and (max-width: 520px) {
+    gap: 0;
+  }
 }
 
 .gift__tag {
   @extend %font_action-small;
+  white-space: nowrap;
   padding: 12px 20px;
   transition: all 0.4s;
+  @media screen and (max-width: 520px) {
+    padding: 12px 8px;
+  }
 
   &.inactive {
-    &:hover {
-      cursor: pointer;
-      background-color: variables.$color-white-20;
-      border-radius: 12px;
-    }
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        cursor: pointer;
+        background-color: variables.$color-white-20;
+        border-radius: 12px;
+      }
+    }    
   }  
 
   &.active {
@@ -63,7 +75,7 @@
 .gift__card-container {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
   gap: 12px;
 }
