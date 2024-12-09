@@ -17,11 +17,11 @@
   color: variables.$color-white;
   margin-bottom: 20px;
   & p {
-    @extend %font_caption;
+    @include fonts.font_caption;
     margin: 0;
   }
   & h2 {
-    @extend %font_header2;
+    @include fonts.font_header2;
     margin: 0;
   }
 }

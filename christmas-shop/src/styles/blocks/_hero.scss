@@ -32,12 +32,12 @@
 }
 
 .hero__caption {
-  @extend %font_caption;
+  @include fonts.font_caption;
   margin: 0;
 }
 
 .hero__title {
-  @extend %font_header1;
+  @include fonts.font_header1;
   text-align: center;
   margin: 0px;
   & span {

@@ -17,11 +17,11 @@
   align-items: center;
   gap: 12px;
   p {
-    @extend %font_caption;
+    @include fonts.font_caption;
     margin: 0;
   }
   h2 {
-    @extend %font_header2;
+    @include fonts.font_header2;
     margin: 0;
   }
 }
@@ -46,7 +46,7 @@
 }
 
 .slider__word {
-  @extend %font_slider-text;
+  @include fonts.font_slider-text;
 }
 
 .slider__image {

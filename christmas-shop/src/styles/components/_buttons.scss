@@ -7,7 +7,7 @@
   background-color: variables.$color-dark;
   padding: 20px 32px;
   border-radius: 20px;
-  @extend %font_action-small;
+  @include fonts.font_action-small;
   color: variables.$color-white;
   text-decoration: none;
   white-space: nowrap;

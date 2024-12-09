@@ -40,7 +40,7 @@
 }
 
 .gift-card__tag {
-  @extend %font_header4;
+  @include fonts.font_header4;
   margin: 0 0 9px 0;
   &_work {
     color: variables.$color-tag-purple;
@@ -54,7 +54,7 @@
 }
 
 .gift-card__title {
-  @extend %font_header3;
+  @include fonts.font_header3;
   margin: 0;
   transition: all 0.3s;
 }

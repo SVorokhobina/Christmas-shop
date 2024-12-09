@@ -50,19 +50,19 @@
 }
 
 .about__caption {
-  @extend %font_caption;
+  @include fonts.font_caption;
   color: variables.$color-primary;
   margin: 0;
 }
 
 .about__title {
-  @extend %font_header2;
+  @include fonts.font_header2;
   color: variables.$color-dark;
   margin: 0;
 }
 
 .about__description {
-  @extend %font_paragraph;
+  @include fonts.font_paragraph;
   color: variables.$color-dark;
   margin: 0;
 }

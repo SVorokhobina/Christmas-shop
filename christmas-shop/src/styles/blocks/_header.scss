@@ -1,6 +1,8 @@
 @use '../general/variables';
 @use '../general/fonts';
 
+$pseudo-elem-width: 20px;
+
 .header__wrapper {
   display: flex;
   justify-content: space-between;
@@ -33,14 +35,35 @@ a.logo {
 }
 
 .logo__text {
-  @extend %font_action-small;
+  @include fonts.font_action-small;
   color: variables.$color-dark;
 }
 
 .header__navigation {
   @media screen and (max-width: 768px) {
-    display: none;
+    //display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 64px;
+    background-color: variables.$color-white;
+    width: 100vw;
+    height: 100vh;
   }
+
+  /*&.open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 64px;
+    background-color: variables.$color-white;
+    width: 100vw;
+    height: 100vh;
+  }*/
 }
 
 .navigation {
@@ -50,6 +73,10 @@ a.logo {
   gap: 8px;
   margin: 0px;
   padding: 0px;
+  @media screen and (max-width: 768px) {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
 }
 
 .navigation__elem {
@@ -60,9 +87,11 @@ a.logo {
 .navigation__link {
   display: inline-block;
   padding: 12px 20px;
-  @extend %font_action-small;
+  @include fonts.font_action-small;
   color: variables.$color-dark;
-  border-radius: 12px;
+  @media screen and (max-width: 768px) {
+    @include fonts.font_action-large;
+  }
 }
 
 .navigation__link {
@@ -73,6 +102,7 @@ a.logo {
       cursor: pointer;
       color: variables.$color-primary;
       background-color: variables.$color-primary-10;
+      border-radius: 12px;
     }
   }
 }
@@ -88,12 +118,12 @@ a.logo {
     display: inline-block;
     position: absolute;
     content: '';
-    width: 20px;
+    width: $pseudo-elem-width;
     height: 0;
     border: 0.5px solid variables.$color-dark;
     border-radius: 2px;
-    right: 50%;
-    transform: translateX(50%);
+    right: calc(50% - $pseudo-elem-width / 2);
+    transition: all 0.4s;
   }
   &::before {
     top: 15px;
@@ -110,5 +140,14 @@ a.logo {
 
   @media screen and (max-width: 768px) {
     display: inline-block;
+  }
+
+  &.open::before {
+    transform: rotate(-45deg);
+    top: 50%;
+  }
+  &.open::after {
+    transform: rotate(45deg);
+    top: 50%;
   }
 }
