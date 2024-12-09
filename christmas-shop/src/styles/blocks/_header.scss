@@ -2,6 +2,8 @@
 @use '../general/fonts';
 
 $pseudo-elem-width: 20px;
+$header-height: 64px;
+$menu-to-close-delay: 0.3s;
 
 .header__wrapper {
   display: flex;
@@ -18,9 +20,6 @@ $pseudo-elem-width: 20px;
   align-items: center;
   gap: 8px;
   padding: 8px 20px;
-}
-
-a.logo {
   text-decoration: none;
   &:hover {
     cursor: pointer;
@@ -41,32 +40,30 @@ a.logo {
 
 .header__navigation {
   @media screen and (max-width: 768px) {
-    //display: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    left: 0;
-    top: 64px;
+    position: fixed;
+    right: -100%;
+    top: $header-height;
     background-color: variables.$color-white;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    //to avoid the red line between the header and the menu
+    height: calc(100% - $header-height + 1px);  
+    transition: all 0.3s;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
   }
 
-  /*&.open {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 0;
-    top: 64px;
-    background-color: variables.$color-white;
-    width: 100vw;
-    height: 100vh;
-  }*/
+  &.open {
+    visibility: visible;
+    transform: translateX(-100%);
+    opacity: 1;
+  }
 }
 
-.navigation {
+.navigation__list {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -121,6 +118,7 @@ a.logo {
     width: $pseudo-elem-width;
     height: 0;
     border: 0.5px solid variables.$color-dark;
+    background-color: variables.$color-dark;
     border-radius: 2px;
     right: calc(50% - $pseudo-elem-width / 2);
     transition: all 0.4s;
@@ -131,17 +129,14 @@ a.logo {
   &::after {
     bottom: 15px;
   }
-
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       cursor: pointer;
     }
   }
-
   @media screen and (max-width: 768px) {
     display: inline-block;
   }
-
   &.open::before {
     transform: rotate(-45deg);
     top: 50%;

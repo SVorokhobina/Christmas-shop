@@ -1,6 +1,8 @@
 import '../styles/home.scss';
-import handleBurgerButtonClick from './components/burger';
+import { handleBurgerButtonClick, handleMenuLinkClick, handleOpenMenuResize } from './components/burger';
 
 window.onload = function() {
   handleBurgerButtonClick();
+  handleMenuLinkClick();
+  handleOpenMenuResize();
 }
