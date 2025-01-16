@@ -49,7 +49,8 @@ $menu-to-close-delay: 0.3s;
     background-color: variables.$color-white;
     width: 100%;
     //to avoid the red line between the header and the menu
-    height: calc(100% - $header-height + 1px);  
+    height: calc(100% - $header-height + 1px);
+    overflow: auto;
     transition: all 0.3s;
     visibility: hidden;
     opacity: 0;
@@ -68,10 +69,11 @@ $menu-to-close-delay: 0.3s;
   align-items: baseline;
   justify-content: space-between;
   gap: 8px;
-  margin: 0px;
+  margin: auto;
   padding: 0px;
   @media screen and (max-width: 768px) {
     flex-flow: column nowrap;
+    justify-content: center;
     align-items: center;
   }
 }
