@@ -38,19 +38,19 @@ function getNewYearDate() {
 
 function setInitialTimer(num) {
   const daysNumber = Math.trunc(num / msInOneDay);
-  daysPlaceholder.textContent = String(daysNumber);
+  daysPlaceholder.textContent = daysNumber;
 
   const hoursDiff = num - daysNumber * msInOneDay;
   const hoursNumber = Math.trunc(hoursDiff / msInOneHour);
-  hoursPlaceholder.textContent = String(hoursNumber);
+  hoursPlaceholder.textContent = hoursNumber;
 
   const minutesDiff = hoursDiff - hoursNumber * msInOneHour;
   const minutesNumber = Math.trunc(minutesDiff / msInOneMinute);
-  minutesPlaceholder.textContent = String(minutesNumber);
+  minutesPlaceholder.textContent = minutesNumber;
 
   const secondsDiff = minutesDiff - minutesNumber * msInOneMinute;
   const secondsNumber = Math.trunc(secondsDiff / msInOneSecond);
-  secondsPlaceholder.textContent = String(secondsNumber);
+  secondsPlaceholder.textContent = secondsNumber;
 }
 
 function updateTimer() {
@@ -61,34 +61,34 @@ function updateTimer() {
 
   if (seconds !== 0) {
     seconds -= 1;
-    secondsPlaceholder.textContent = String(seconds);
+    secondsPlaceholder.textContent = seconds;
     return;
   } else {
     seconds = 59;
-    secondsPlaceholder.textContent = String(seconds);
+    secondsPlaceholder.textContent = seconds;
   }
   
   if (minutes !== 0) {
     minutes -= 1;
-    minutesPlaceholder.textContent = String(minutes);
+    minutesPlaceholder.textContent = minutes;
     return;
   } else {
     minutes = 59;
-    minutesPlaceholder.textContent = String(minutes);
+    minutesPlaceholder.textContent = minutes;
   }
 
   if (hours !== 0) {
     hours -= 1;
-    hoursPlaceholder.textContent = String(hours);
+    hoursPlaceholder.textContent = hours;
     return;
   } else {
     hours = 23;
-    hoursPlaceholder.textContent = String(hours);
+    hoursPlaceholder.textContent = hours;
   }
   
   if (days !== 0) {
     days -= 1;
-    daysPlaceholder.textContent = String(days);
+    daysPlaceholder.textContent = days;
     return;
   } else {
     let year = getDate().getFullYear();
@@ -97,7 +97,7 @@ function updateTimer() {
     } else {
       days = 364;
     }
-    daysPlaceholder.textContent = String(days);
+    daysPlaceholder.textContent = days;
     setSliderYear();
   }
   return;

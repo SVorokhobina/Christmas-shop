@@ -15,6 +15,7 @@
   flex-flow: column nowrap;
   align-items: center;
   gap: 20px;
+  width: 100%;
   padding: 60px 82px;
   border-radius: 20px;
   background-color: variables.$color-primary;
@@ -54,17 +55,13 @@
   @media screen and (max-width: 520px) {
     padding: 12px 8px;
   }
-
-  &.inactive {
-    @media (hover: hover) and (pointer: fine) {
-      &:hover {
-        cursor: pointer;
-        background-color: variables.$color-white-20;
-        border-radius: 12px;
-      }
-    }    
-  }  
-
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      cursor: pointer;
+      background-color: variables.$color-white-20;
+      border-radius: 12px;
+    }
+  }    
   &.active {
     cursor: auto;
     background-color: variables.$color-white-20;

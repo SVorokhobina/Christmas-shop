@@ -45,11 +45,11 @@ $menu-to-close-delay: 0.3s;
     justify-content: center;
     position: fixed;
     right: -100%;
-    top: $header-height;
+    //to avoid the red line between the header and the menu
+    top: $header-height - 1px;
+    height: calc(100% - $header-height + 1px);
     background-color: variables.$color-white;
     width: 100%;
-    //to avoid the red line between the header and the menu
-    height: calc(100% - $header-height + 1px);
     overflow: auto;
     transition: all 0.3s;
     visibility: hidden;

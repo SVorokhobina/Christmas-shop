@@ -2,6 +2,7 @@
 @use '../general/fonts';
 
 .gift-card {
+  display: none;
   width: 310px;
   height: 342px;
   border-radius: 20px;
@@ -13,6 +14,9 @@
         color: variables.$color-primary;
       }
     }
+  }
+  &.shown {
+    display: block;
   }
 }
 
