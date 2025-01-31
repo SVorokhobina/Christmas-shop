@@ -18,8 +18,14 @@ body {
   min-height: 100vh;
   margin: 0;
   background-color: variables.$color-white;
-  &.open-menu {
+  &.open-menu,
+  &.open-modal {
     overflow: hidden;
+    /* position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    padding-right: ${window.innerWidth - document.body.offsetWidth}px */
   }
 }
 
