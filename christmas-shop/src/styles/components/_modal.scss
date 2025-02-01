@@ -11,6 +11,7 @@ $cross-line-length: 28px; // Math.sqrt(2 * (20 ^ 2))
   width: 100vw;
   height: 100vh;
   background-color: variables.$color-overlay;
+  z-index: 200;
 }
 
 .modal-window {

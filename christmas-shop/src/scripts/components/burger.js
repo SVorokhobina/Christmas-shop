@@ -1,3 +1,5 @@
+import { estimateScrollWidth, increaseDocumentWidth, decreaseDocumentWidth } from '../components/window-width';
+
 const button = document.querySelector('.burger-button');
 const menu = document.querySelector('.header__navigation');
 const body = document.body;
@@ -33,12 +35,16 @@ export function handleOpenMenuResize() {
 }
 
 function openBurgerMenu() {
+  const scrollWidth = estimateScrollWidth();
+  increaseDocumentWidth(scrollWidth);
+
   button.classList.add('open');
   menu.classList.add('open');
   body.classList.add('open-menu');
 }
 
 function closeBurgerMenu() {
+  decreaseDocumentWidth();
   button.classList.remove('open');
   menu.classList.remove('open');
   body.classList.remove('open-menu');
