@@ -28,7 +28,7 @@ export function handleMenuLinkClick() {
 
 export function handleOpenMenuResize() {
   window.addEventListener('resize', () => {
-    if (document.documentElement.clientWidth >= 768) {
+    if (window.innerWidth >= 768) {
       closeBurgerMenu()
     }
   });

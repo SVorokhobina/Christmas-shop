@@ -27,21 +27,20 @@
 }
 
 .slider__container {
-  position: relative;
   height: 200px;
   width: 100%;
   overflow: hidden;
-  z-index: 2;
 }
 
 .slider__line {
-  position: absolute;
+  position: relative;
   left: 82px;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   gap: 20px;
   z-index: 2;
+  transition: all 0.4s ease-out;
   @media screen and (max-width: 768px) {
     left: 8px;
   }
@@ -52,6 +51,7 @@
 }
 
 .slider__image {
+  flex-shrink: 0;
   display: inline-block;
   width: 200px;
   height: 200px;
@@ -99,7 +99,7 @@
   }  
 }
 
-.arrow-button_active {
+.arrow-button.active {
   & svg * {
     stroke-opacity: 1;    
   }
