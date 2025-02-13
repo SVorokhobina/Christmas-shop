@@ -20,7 +20,7 @@ export function setTimer() {
   const diff = newYear.getTime() - currentDate.getTime();
 
   setInitialTimer(diff);
-  let timer = setInterval(updateTimer, 1000);
+  setInterval(updateTimer, 1000);
 }
 
 function getDate() {
@@ -67,7 +67,7 @@ function updateTimer() {
     seconds = 59;
     secondsPlaceholder.textContent = seconds;
   }
-  
+
   if (minutes !== 0) {
     minutes -= 1;
     minutesPlaceholder.textContent = minutes;
@@ -85,7 +85,7 @@ function updateTimer() {
     hours = 23;
     hoursPlaceholder.textContent = hours;
   }
-  
+
   if (days !== 0) {
     days -= 1;
     daysPlaceholder.textContent = days;

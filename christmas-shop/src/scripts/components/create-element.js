@@ -1,4 +1,4 @@
-export default function createElement({tag = 'div', classes, content}) {
+export default function createElement({ tag = 'div', classes, content }) {
   const element = document.createElement(tag);
 
   if (classes !== undefined) {

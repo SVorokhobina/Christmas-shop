@@ -96,12 +96,12 @@
   & svg * {
     stroke-opacity: 0.4;
     transition: all 0.4s;
-  }  
+  }
 }
 
 .arrow-button.active {
   & svg * {
-    stroke-opacity: 1;    
+    stroke-opacity: 1;
   }
   @media (hover: hover) and (pointer: fine) {
     cursor: pointer;
@@ -113,5 +113,5 @@
         stroke: variables.$color-primary;
       }
     }
-  } 
+  }
 }

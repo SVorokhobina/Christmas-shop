@@ -3,8 +3,11 @@
 
 .cta-section {
   padding: 120px 82px;
-  background-image: url(../assets/images/bg-snow.png), url(../assets/images/bg-forest.png);
-  background-position: center center, center center;
+  background-image:
+    url(../assets/images/bg-snow.png), url(../assets/images/bg-forest.png);
+  background-position:
+    center center,
+    center center;
   background-size: cover, cover;
   background-repeat: no-repeat, no-repeat;
   @media screen and (max-width: 590px) {

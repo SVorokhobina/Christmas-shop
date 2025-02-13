@@ -5,23 +5,29 @@ export default function implementScrollToTopButton() {
     if (window.innerWidth > 768) {
       return;
     }
-    if (document.documentElement.scrollTop >= 300 &&
-      !scrollToTopButton.classList.contains('shown')) {
-        showButton();
+    if (
+      document.documentElement.scrollTop >= 300 &&
+      !scrollToTopButton.classList.contains('shown')
+    ) {
+      showButton();
     }
-    if (document.documentElement.scrollTop < 300 &&
-      scrollToTopButton.classList.contains('shown')) {
-        hideButton();
-    }
-  });
-
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 768 &&
+    if (
+      document.documentElement.scrollTop < 300 &&
       scrollToTopButton.classList.contains('shown')
     ) {
       hideButton();
     }
-    if (window.innerWidth <= 768 &&
+  });
+
+  window.addEventListener('resize', () => {
+    if (
+      window.innerWidth > 768 &&
+      scrollToTopButton.classList.contains('shown')
+    ) {
+      hideButton();
+    }
+    if (
+      window.innerWidth <= 768 &&
       !scrollToTopButton.classList.contains('shown') &&
       document.documentElement.scrollTop >= 300
     ) {
@@ -44,6 +50,6 @@ function scrollToTop() {
   window.scrollTo({
     top: 0,
     left: 0,
-    behavior: 'auto'
+    behavior: 'auto',
   });
 }

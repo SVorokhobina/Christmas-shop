@@ -1,9 +1,13 @@
 import '../styles/gift.scss';
-import { handleBurgerButtonClick, handleMenuLinkClick, handleOpenMenuResize } from './components/burger';
+import {
+  handleBurgerButtonClick,
+  handleMenuLinkClick,
+  handleOpenMenuResize,
+} from './components/burger';
 import { uploadAllCards, chooseCategory } from './components/category_switch';
 import implementScrollToTopButton from './components/scroll_to_top';
 
-window.onload = function() {
+window.onload = function () {
   // gift category switching
   uploadAllCards();
   chooseCategory();
@@ -15,4 +19,4 @@ window.onload = function() {
 
   // scroll-to-top button
   implementScrollToTopButton();
-}
+};

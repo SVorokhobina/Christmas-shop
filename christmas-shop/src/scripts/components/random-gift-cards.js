@@ -21,8 +21,8 @@ function getRandomGifts() {
   return arr.slice(-4);
 }
 
-
-function getRandomIndex(max) { // max is the length of the array
-  const randomIndex = Math.floor(Math.random() * max); 
+function getRandomIndex(max) {
+  // max is the length of the array
+  const randomIndex = Math.floor(Math.random() * max);
   return randomIndex;
 }

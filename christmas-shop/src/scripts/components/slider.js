@@ -29,16 +29,19 @@ function getShiftParams() {
   const screenWidth = window.innerWidth;
   const contentWidth = document.documentElement.clientWidth;
   const sliderWidth = sliderLine.scrollWidth;
-  const sliderMargin = screenWidth > 768 ? wideScreenMargin : narrowScreenMargin;
+  const sliderMargin =
+    screenWidth > 768 ? wideScreenMargin : narrowScreenMargin;
   const numOfShifts = screenWidth > 768 ? numOfShiftsWide : numOfShiftsNarrow;
-  const shiftWidth = Math.ceil((sliderWidth - contentWidth + 2 * sliderMargin) / numOfShifts);
+  const shiftWidth = Math.ceil(
+    (sliderWidth - contentWidth + 2 * sliderMargin) / numOfShifts
+  );
   return {
     screenWidth: screenWidth,
     contentWidth: contentWidth,
     sliderWidth: sliderWidth,
     margin: sliderMargin,
     numOfShifts: numOfShifts,
-    shiftWidth: shiftWidth
+    shiftWidth: shiftWidth,
   };
 }
 

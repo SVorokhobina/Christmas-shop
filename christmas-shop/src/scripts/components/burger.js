@@ -1,4 +1,8 @@
-import { estimateScrollWidth, increaseDocumentWidth, decreaseDocumentWidth } from '../components/window-width';
+import {
+  estimateScrollWidth,
+  increaseDocumentWidth,
+  decreaseDocumentWidth,
+} from '../components/window-width';
 
 const button = document.querySelector('.burger-button');
 const menu = document.querySelector('.header__navigation');
@@ -18,18 +22,18 @@ export function handleBurgerButtonClick() {
 export function handleMenuLinkClick() {
   const links = document.querySelectorAll('.navigation__elem');
   links.forEach((link) => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener('click', () => {
       if (menu.classList.contains('open') === true) {
-        closeBurgerMenu();        
+        closeBurgerMenu();
       }
-    })
+    });
   });
 }
 
 export function handleOpenMenuResize() {
   window.addEventListener('resize', () => {
     if (window.innerWidth >= 768) {
-      closeBurgerMenu()
+      closeBurgerMenu();
     }
   });
 }

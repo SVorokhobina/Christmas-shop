@@ -17,34 +17,69 @@
 // h1
 @mixin font_header1() {
   @include font-prim;
-  @include font($size: 3.2rem, $weight: 600, $height: 150%, $spacing: 0.576rem, $transform: uppercase);
+  @include font(
+    $size: 3.2rem,
+    $weight: 600,
+    $height: 150%,
+    $spacing: 0.576rem,
+    $transform: uppercase
+  );
 }
 
 // h2
 @mixin font_header2() {
   @include font-prim;
-  @include font($size: 2.4rem, $weight: 600, $height: 152%, $spacing: 0.384rem, $transform: uppercase);
+  @include font(
+    $size: 2.4rem,
+    $weight: 600,
+    $height: 152%,
+    $spacing: 0.384rem,
+    $transform: uppercase
+  );
 }
-
 
 @mixin font_action-large() {
   @include font-prim;
-  @include font($size: 2.4rem, $weight: 600, $height: 152%, $spacing: 0.384rem, $transform: uppercase);
+  @include font(
+    $size: 2.4rem,
+    $weight: 600,
+    $height: 152%,
+    $spacing: 0.384rem,
+    $transform: uppercase
+  );
 }
 
 @mixin font_header3() {
   @include font-prim;
-  @include font($size: 1.6rem, $weight: 600, $height: 152%, $spacing: 0.128rem, $transform: uppercase);
+  @include font(
+    $size: 1.6rem,
+    $weight: 600,
+    $height: 152%,
+    $spacing: 0.128rem,
+    $transform: uppercase
+  );
 }
 
 @mixin font_header4() {
   @include font-prim;
-  @include font($size: 1.2rem, $weight: 600, $height: 130%, $spacing: 0.06rem, $transform: uppercase);
+  @include font(
+    $size: 1.2rem,
+    $weight: 600,
+    $height: 130%,
+    $spacing: 0.06rem,
+    $transform: uppercase
+  );
 }
 
 @mixin font_action-small() {
   @include font-prim;
-  @include font($size: 1.2rem, $weight: 600, $height: 130%, $spacing: 0.06rem, $transform: uppercase);
+  @include font(
+    $size: 1.2rem,
+    $weight: 600,
+    $height: 130%,
+    $spacing: 0.06rem,
+    $transform: uppercase
+  );
 }
 
 @mixin font_paragraph() {
@@ -59,5 +94,5 @@
 
 @mixin font_slider-text() {
   @include font-prim;
-  @include font($size: 8.0rem, $weight: 600, $transform: uppercase);
+  @include font($size: 8rem, $weight: 600, $transform: uppercase);
 }

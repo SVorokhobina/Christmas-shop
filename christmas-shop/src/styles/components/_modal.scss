@@ -34,7 +34,7 @@ $cross-line-length: 28px; // Math.sqrt(2 * (20 ^ 2))
     content: '';
     position: absolute;
     top: 50%;
-    right: 50%;    
+    right: 50%;
     width: $cross-line-length;
     height: 0;
     border: 0.5px solid variables.$color-dark;

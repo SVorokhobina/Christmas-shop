@@ -12,11 +12,9 @@ export function uploadAllCards() {
 export function chooseCategory() {
   const tags = document.querySelectorAll('.gift__tag');
   tags.forEach((tag) => {
-    tag.addEventListener('click', (e) => {
+    tag.addEventListener('click', () => {
       if (!tag.classList.contains('active')) {
-        tags.forEach((tag) => 
-          tag.classList.remove('active')
-        );
+        tags.forEach((tag) => tag.classList.remove('active'));
         tag.classList.add('active');
         displayCards(tag.textContent);
       }
@@ -32,7 +30,7 @@ function displayCards(text) {
     });
     return;
   }
-  
+
   const category = text.slice(4);
   cards.forEach((card) => {
     if (card.dataset.category === category) {

@@ -35,6 +35,9 @@ body {
 }
 
 .main-colored-wrapper {
-  background-image: linear-gradient(variables.$color-primary 99.9%, variables.$color-white);
+  background-image: linear-gradient(
+    variables.$color-primary 99.9%,
+    variables.$color-white
+  );
   border-radius: 20px;
 }

@@ -6,28 +6,28 @@ export default function createGiftCard(elem) {
   const elemCategory = elemTag.slice(4);
 
   const card = createElement({
-    classes: ['gift-card', `gift-card_${elemCategory}`, 'shown']
+    classes: ['gift-card', `gift-card_${elemCategory}`, 'shown'],
   });
   card.setAttribute('data-category', elemCategory);
 
   const image = createElement({
-    classes: ['gift-card__image', `gift-card__image_${elemCategory}`]
+    classes: ['gift-card__image', `gift-card__image_${elemCategory}`],
   });
 
   const text = createElement({
-    classes: ['gift-card__text']
+    classes: ['gift-card__text'],
   });
 
   const cardTag = createElement({
     tag: 'h4',
     classes: ['gift-card__tag', `gift-card__tag_${elemCategory}`],
-    content: `${elemTag}`
+    content: `${elemTag}`,
   });
 
   const cardTitle = createElement({
     tag: 'h3',
     classes: ['gift-card__title'],
-    content: elem.name
+    content: elem.name,
   });
 
   card.append(image, text);
