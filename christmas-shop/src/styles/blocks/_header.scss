@@ -24,6 +24,9 @@ $menu-to-close-delay: 0.3s;
   &:hover {
     cursor: pointer;
   }
+  &.logo_main-page:hover {
+    cursor: auto;
+  }
 }
 
 .logo__icon {
