@@ -26,16 +26,16 @@
   }
   &_snake {
     background-image: url(../assets/icons/footer-snake.svg);
-  } 
+  }
 }
 
 .footer-card__link-target {
-  @extend %font_action-large;
+  @include fonts.font_action-large;
   transition: color 0.3s;
 }
 
 .footer-card__link-action {
-  @extend %font_header3;
+  @include fonts.font_header3;
   transition: color 0.3s;
 }
 

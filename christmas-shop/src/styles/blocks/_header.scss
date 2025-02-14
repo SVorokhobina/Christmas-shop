@@ -1,6 +1,10 @@
 @use '../general/variables';
 @use '../general/fonts';
 
+$pseudo-elem-width: 20px;
+$header-height: 64px;
+$menu-to-close-delay: 0.3s;
+
 .header__wrapper {
   display: flex;
   justify-content: space-between;
@@ -16,12 +20,12 @@
   align-items: center;
   gap: 8px;
   padding: 8px 20px;
-}
-
-a.logo {
   text-decoration: none;
   &:hover {
     cursor: pointer;
+  }
+  &.logo_main-page:hover {
+    cursor: auto;
   }
 }
 
@@ -29,27 +33,52 @@ a.logo {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image: url(../assets/icons/logo_snowflake.svg);
+  background-image: url(../assets/icons/snowflake-red.svg);
 }
 
 .logo__text {
-  @extend %font_action-small;
+  @include fonts.font_action-small;
   color: variables.$color-dark;
 }
 
 .header__navigation {
   @media screen and (max-width: 768px) {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: -100%;
+    //to avoid the red line between the header and the menu
+    top: $header-height - 1px;
+    height: calc(100% - $header-height + 1px);
+    background-color: variables.$color-white;
+    width: 100%;
+    overflow: auto;
+    transition: all 0.3s;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+  }
+
+  &.open {
+    visibility: visible;
+    transform: translateX(-100%);
+    opacity: 1;
   }
 }
 
-.navigation {
+.navigation__list {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   gap: 8px;
-  margin: 0px;
+  margin: auto;
   padding: 0px;
+  @media screen and (max-width: 768px) {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .navigation__elem {
@@ -60,19 +89,24 @@ a.logo {
 .navigation__link {
   display: inline-block;
   padding: 12px 20px;
-  @extend %font_action-small;
+  @include fonts.font_action-small;
   color: variables.$color-dark;
-  border-radius: 12px;
+  @media screen and (max-width: 768px) {
+    @include fonts.font_action-large;
+  }
 }
 
 .navigation__link {
   text-decoration: none;
-  transition: color 0.3s, background-color 0.3s;
+  transition:
+    color 0.3s,
+    background-color 0.3s;
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       cursor: pointer;
       color: variables.$color-primary;
       background-color: variables.$color-primary-10;
+      border-radius: 12px;
     }
   }
 }
@@ -88,12 +122,13 @@ a.logo {
     display: inline-block;
     position: absolute;
     content: '';
-    width: 20px;
+    width: $pseudo-elem-width;
     height: 0;
     border: 0.5px solid variables.$color-dark;
+    background-color: variables.$color-dark;
     border-radius: 2px;
-    right: 50%;
-    transform: translateX(50%);
+    right: calc(50% - $pseudo-elem-width / 2);
+    transition: all 0.4s;
   }
   &::before {
     top: 15px;
@@ -101,14 +136,20 @@ a.logo {
   &::after {
     bottom: 15px;
   }
-
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       cursor: pointer;
     }
   }
-
   @media screen and (max-width: 768px) {
     display: inline-block;
+  }
+  &.open::before {
+    transform: rotate(-45deg);
+    top: 50%;
+  }
+  &.open::after {
+    transform: rotate(45deg);
+    top: 50%;
   }
 }

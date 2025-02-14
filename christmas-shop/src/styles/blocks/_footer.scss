@@ -41,16 +41,16 @@
     &:hover > svg > path {
       stroke: variables.$color-primary;
     }
-  }  
+  }
 }
 
 .footer__copyright {
-  @extend %font_paragraph;
+  @include fonts.font_paragraph;
   margin: 0 0 12px 0;
 }
 
 .footer__school-link {
-  @extend %font_caption;
+  @include fonts.font_caption;
   color: variables.$color-dark;
   text-decoration: none;
   transition: color 0.3s;

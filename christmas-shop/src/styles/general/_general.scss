@@ -18,6 +18,15 @@ body {
   min-height: 100vh;
   margin: 0;
   background-color: variables.$color-white;
+  &.open-menu,
+  &.open-modal {
+    overflow: hidden;
+    /* position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    padding-right: ${window.innerWidth - document.body.offsetWidth}px */
+  }
 }
 
 .wrapper {
@@ -26,7 +35,9 @@ body {
 }
 
 .main-colored-wrapper {
-  //background-color: variables.$color-primary;
-  background-image: linear-gradient(variables.$color-primary 99.9%, variables.$color-white);
+  background-image: linear-gradient(
+    variables.$color-primary 99.9%,
+    variables.$color-white
+  );
   border-radius: 20px;
 }

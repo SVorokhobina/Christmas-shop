@@ -7,16 +7,44 @@
   background-color: variables.$color-dark;
   padding: 20px 32px;
   border-radius: 20px;
-  @extend %font_action-small;
+  @include fonts.font_action-small;
   color: variables.$color-white;
   text-decoration: none;
   white-space: nowrap;
-  transition: color 0.4s, background-color 0.4s;
+  transition:
+    color 0.4s,
+    background-color 0.4s;
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       cursor: pointer;
       background-color: variables.$color-white;
       color: variables.$color-dark;
+    }
+  }
+}
+
+// Scroll-to-top button on the Gift page
+.scroll-to-top__button {
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border: 1px solid variables.$color-primary;
+  border-radius: 28px;
+  background-color: variables.$color-white;
+  background-image: url('../assets/icons/arrow-up.svg');
+  background-position: center;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  z-index: 5;
+  opacity: 0;
+  transition: all 0.2s ease;
+  &.shown {
+    opacity: 1;
+    &:hover {
+      cursor: pointer;
     }
   }
 }

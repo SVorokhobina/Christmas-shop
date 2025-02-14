@@ -15,6 +15,7 @@
   flex-flow: column nowrap;
   align-items: center;
   gap: 20px;
+  width: 100%;
   padding: 60px 82px;
   border-radius: 20px;
   background-color: variables.$color-primary;
@@ -28,7 +29,7 @@
 }
 
 .gift__title {
-  @extend %font_header1;
+  @include fonts.font_header1;
   max-width: 426px;
   margin: 0;
   text-align: center;
@@ -47,24 +48,20 @@
 }
 
 .gift__tag {
-  @extend %font_action-small;
+  @include fonts.font_action-small;
   white-space: nowrap;
   padding: 12px 20px;
   transition: all 0.4s;
   @media screen and (max-width: 520px) {
     padding: 12px 8px;
   }
-
-  &.inactive {
-    @media (hover: hover) and (pointer: fine) {
-      &:hover {
-        cursor: pointer;
-        background-color: variables.$color-white-20;
-        border-radius: 12px;
-      }
-    }    
-  }  
-
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      cursor: pointer;
+      background-color: variables.$color-white-20;
+      border-radius: 12px;
+    }
+  }
   &.active {
     cursor: auto;
     background-color: variables.$color-white-20;
