@@ -1,0 +1,43 @@
+@use './variables';
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  background-color: variables.$color-white;
+  &.open-menu,
+  &.open-modal {
+    overflow: hidden;
+    /* position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    padding-right: ${window.innerWidth - document.body.offsetWidth}px */
+  }
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.main-colored-wrapper {
+  background-image: linear-gradient(
+    variables.$color-primary 99.9%,
+    variables.$color-white
+  );
+  border-radius: 20px;
+}

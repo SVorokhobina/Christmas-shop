@@ -1,0 +1,117 @@
+@use '../general/variables';
+@use '../general/fonts';
+
+.slider-section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 0;
+  color: variables.$color-white;
+  background: url(../assets/images/bg-snow.png) center center/cover no-repeat;
+}
+
+.slider__title {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 12px;
+  p {
+    @include fonts.font_caption;
+    margin: 0;
+  }
+  h2 {
+    @include fonts.font_header2;
+    margin: 0;
+  }
+}
+
+.slider__container {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider__line {
+  position: relative;
+  left: 82px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 20px;
+  z-index: 2;
+  transition: all 0.4s ease-out;
+  @media screen and (max-width: 768px) {
+    left: 8px;
+  }
+}
+
+.slider__word {
+  @include fonts.font_slider-text;
+}
+
+.slider__image {
+  flex-shrink: 0;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  background-position: center center;
+  background-size: cover;
+  &_1 {
+    background-image: url(../assets/images/snowman.png);
+  }
+  &_2 {
+    background-image: url(../assets/images/christmas-trees.png);
+  }
+  &_3 {
+    background-image: url(../assets/images/christmas-tree-ball.png);
+  }
+  &_4 {
+    background-image: url(../assets/images/fairytale-house.png);
+  }
+}
+
+.slider__buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  width: 100%;
+  padding: 0 82px;
+  @media screen and (max-width: 768px) {
+    padding: 0 8px;
+  }
+}
+
+.arrow-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: auto;
+  & svg * {
+    stroke-opacity: 0.4;
+    transition: all 0.4s;
+  }
+}
+
+.arrow-button.active {
+  & svg * {
+    stroke-opacity: 1;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    cursor: pointer;
+    &:hover > svg {
+      & > rect {
+        fill: variables.$color-white;
+      }
+      & > path {
+        stroke: variables.$color-primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@use '../general/variables';
+@use '../general/fonts';
+
+.best-gifts-section {
+  padding: 60px 82px;
+  background: url(../assets/images/bg-snow.png) center center/cover no-repeat;
+  @media screen and (max-width: 800px) {
+    padding: 60px 8px;
+  }
+}
+
+.best__title {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 12px;
+  color: variables.$color-white;
+  margin-bottom: 20px;
+  & p {
+    @include fonts.font_caption;
+    margin: 0;
+  }
+  & h2 {
+    @include fonts.font_header2;
+    margin: 0;
+  }
+}
+
+.best__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 12px;
+}

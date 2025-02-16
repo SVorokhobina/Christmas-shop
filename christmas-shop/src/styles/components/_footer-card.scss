@@ -1,0 +1,49 @@
+@use '../general/variables';
+@use '../general/fonts';
+
+.footer-card {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 12px;
+  background-color: variables.$color-background;
+  border-radius: 20px;
+  width: 100%;
+  padding: 20px;
+  color: variables.$color-dark;
+  text-decoration: none;
+}
+
+.footer-card__image {
+  display: block;
+  width: 80px;
+  height: 80px;
+  &_santa {
+    background-image: url(../assets/icons/footer-santa.svg);
+  }
+  &_tree {
+    background-image: url(../assets/icons/footer-tree.svg);
+  }
+  &_snake {
+    background-image: url(../assets/icons/footer-snake.svg);
+  }
+}
+
+.footer-card__link-target {
+  @include fonts.font_action-large;
+  transition: color 0.3s;
+}
+
+.footer-card__link-action {
+  @include fonts.font_header3;
+  transition: color 0.3s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .footer-card:hover {
+    .footer-card__link-target,
+    .footer-card__link-action {
+      color: variables.$color-primary;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+@mixin font($size, $weight, $height: 100%, $spacing: normal, $transform: none) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  letter-spacing: $spacing;
+  text-transform: $transform;
+}
+
+@mixin font-prim() {
+  font-family: 'Montserrat', Verdana, sans-serif;
+}
+
+@mixin font-add() {
+  font-family: 'Allura', serif;
+}
+
+// h1
+@mixin font_header1() {
+  @include font-prim;
+  @include font(
+    $size: 3.2rem,
+    $weight: 600,
+    $height: 150%,
+    $spacing: 0.576rem,
+    $transform: uppercase
+  );
+}
+
+// h2
+@mixin font_header2() {
+  @include font-prim;
+  @include font(
+    $size: 2.4rem,
+    $weight: 600,
+    $height: 152%,
+    $spacing: 0.384rem,
+    $transform: uppercase
+  );
+}
+
+@mixin font_action-large() {
+  @include font-prim;
+  @include font(
+    $size: 2.4rem,
+    $weight: 600,
+    $height: 152%,
+    $spacing: 0.384rem,
+    $transform: uppercase
+  );
+}
+
+@mixin font_header3() {
+  @include font-prim;
+  @include font(
+    $size: 1.6rem,
+    $weight: 600,
+    $height: 152%,
+    $spacing: 0.128rem,
+    $transform: uppercase
+  );
+}
+
+@mixin font_header4() {
+  @include font-prim;
+  @include font(
+    $size: 1.2rem,
+    $weight: 600,
+    $height: 130%,
+    $spacing: 0.06rem,
+    $transform: uppercase
+  );
+}
+
+@mixin font_action-small() {
+  @include font-prim;
+  @include font(
+    $size: 1.2rem,
+    $weight: 600,
+    $height: 130%,
+    $spacing: 0.06rem,
+    $transform: uppercase
+  );
+}
+
+@mixin font_paragraph() {
+  @include font-prim;
+  @include font($size: 1.6rem, $weight: 400, $height: 148%);
+}
+
+@mixin font_caption() {
+  @include font-add;
+  @include font($size: 2.4rem, $weight: 400, $height: 100%, $spacing: 0.12rem);
+}
+
+@mixin font_slider-text() {
+  @include font-prim;
+  @include font($size: 8rem, $weight: 600, $transform: uppercase);
+}

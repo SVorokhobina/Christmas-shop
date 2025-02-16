@@ -1,0 +1,64 @@
+@use '../general/variables';
+@use '../general/fonts';
+
+.gift-card {
+  display: none;
+  width: 310px;
+  height: 342px;
+  border-radius: 20px;
+  background-color: variables.$color-white;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      cursor: pointer;
+      & .gift-card__title {
+        color: variables.$color-primary;
+      }
+    }
+  }
+  &.shown {
+    display: block;
+  }
+}
+
+.gift-card__image {
+  width: 310px;
+  height: 230px;
+  border-radius: 20px 20px 0 0;
+  background-position: center center;
+  background-size: cover;
+  background-color: variables.$color-background;
+  &_work {
+    background-image: url(../assets/images/gift-for-work.png);
+  }
+  &_health {
+    background-image: url(../assets/images/gift-for-health.png);
+  }
+  &_harmony {
+    background-image: url(../assets/images/gift-for-harmony.png);
+  }
+}
+
+.gift-card__text {
+  width: 100%;
+  padding: 20px 20px 0 20px;
+}
+
+.gift-card__tag {
+  @include fonts.font_header4;
+  margin: 0 0 9px 0;
+  &_work {
+    color: variables.$color-tag-purple;
+  }
+  &_health {
+    color: variables.$color-tag-green;
+  }
+  &_harmony {
+    color: variables.$color-tag-pink;
+  }
+}
+
+.gift-card__title {
+  @include fonts.font_header3;
+  margin: 0;
+  transition: all 0.3s;
+}

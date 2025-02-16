@@ -1,0 +1,14 @@
+@use './general/variables';
+@use './general/fonts';
+@use './general/general';
+
+// page blocks
+@use './blocks/header';
+@use './blocks/gifts';
+@use './blocks/footer';
+
+// components
+@use './components/gift-card';
+@use './components/footer-card';
+@use './components/modal';
+@use './components/buttons';

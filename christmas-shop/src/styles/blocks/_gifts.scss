@@ -1,0 +1,78 @@
+@use '../general/variables';
+@use '../general/fonts';
+
+.gift-section {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.gift__wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 60px 82px;
+  border-radius: 20px;
+  background-color: variables.$color-primary;
+  background-image: url(../assets/images/bg-garland.png);
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  @media screen and (max-width: 800px) {
+    padding: 60px 8px;
+  }
+}
+
+.gift__title {
+  @include fonts.font_header1;
+  max-width: 426px;
+  margin: 0;
+  text-align: center;
+  color: variables.$color-white;
+}
+
+.gift__tag-container {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 8px;
+  align-items: center;
+  color: variables.$color-white;
+  @media screen and (max-width: 520px) {
+    gap: 0;
+  }
+}
+
+.gift__tag {
+  @include fonts.font_action-small;
+  white-space: nowrap;
+  padding: 12px 20px;
+  transition: all 0.4s;
+  @media screen and (max-width: 520px) {
+    padding: 12px 8px;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      cursor: pointer;
+      background-color: variables.$color-white-20;
+      border-radius: 12px;
+    }
+  }
+  &.active {
+    cursor: auto;
+    background-color: variables.$color-white-20;
+    border-radius: 12px;
+  }
+}
+
+.gift__card-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
